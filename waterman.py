@@ -31,7 +31,7 @@ class SmithWaterman:
         self.cols = len(seq2) + 1
 
         self.max_score = 0
-        #self.max_pos = (0, 0)
+        self.max_pos = (0, 0)
 
         self.fill_matrix()
 
@@ -41,7 +41,7 @@ class SmithWaterman:
 
     def initialize_matrix(self):
         # Initialize the scoring matrix with zeros
-        self.matrix = np.zeros((self.rows, self.cols), dtype=int)
+        self.matrix = np.zeros((self.rows, self.cols), dtype = int)
     
     def fill_matrix(self):
 
@@ -62,7 +62,7 @@ class SmithWaterman:
             for j in range(1, self.cols):
                 if self.matrix[i, j] > max_score:
                     max_score = self.matrix[i, j]
-                    #self.max_pos = (i, j)
+                    self.max_pos = (i, j)
 
         return max_score
 
@@ -110,26 +110,13 @@ class SmithWaterman:
         self.traceback_coords = traceback_coords
         return aligned_seq1, aligned_seq2
     
-    def display_matrix(self):
-        '''
-        Returns the scoring matrix with the traceback labeled in red
-        '''
-        df = pd.DataFrame(self.matrix) 
-
-        styled_df = df.style.apply( lambda row: [
-            "background-color: crimson" 
-            if (row.name, col_idx) in self.traceback_coords else ""
-            for col_idx in range(df.shape[1]) ], axis=1 )
-        
-
-        return styled_df
     
 
 example = SmithWaterman("AGGTA", "ACGT")
 print(f"Score: {example.score}\n")
 print(f"Alignment:\n{example.alignment[0]}\n{example.alignment[1]}")
 
-example.display_matrix()
+
 
             
 
