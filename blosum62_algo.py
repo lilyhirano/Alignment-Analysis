@@ -93,8 +93,8 @@ def blosum_align(seq1, seq2):
 
 def blosum_align_fasta(file1, file2):
     """
-    Align the FIRST sequence in each FASTA file.
-    Returns score, aligned_seq1, aligned_seq2.
+    Align the FIRST sequence in each FASTA file
+    Returns score, aligned_seq1, aligned_seq2
     """
     seqs1 = read_fasta(file1)
     seqs2 = read_fasta(file2)
