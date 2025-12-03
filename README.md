@@ -41,4 +41,18 @@ Overview/Implementations:
 | **BLOSUM62 alignment**         | O(nm)           | O(nm)            | NW + constant-time BLOSUM lookup |
 
 
+## Set Up
 
+1. Clone or download the repository
+2. Set up virtual environment
+```bash
+python3 -m venv venv
+venv\Scripts\activate    # (Windows)
+source venv/bin/activate   # (Mac / Linux)
+```
+3. Install Dependencies
+    - This repository uses NumPy and Pandas
+```bash
+pip install -r requirements.txt
+```
+4. Run each cell in alignment-analysis.ipynb
