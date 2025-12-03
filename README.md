@@ -35,10 +35,10 @@ Overview/Implementations:
 | Method                         | Time Complexity | Space Complexity | Explanation                      |
 | ------------------------------ | --------------- | ---------------- | -------------------------------- |
 | **Needleman–Wunsch**           | O(nm)           | O(nm)            | n = len(seq1), m = len(seq2)     |
-| **Smith–Waterman**             | O(nm)           | O(nm)            | Same DP structure but local      |
+| **Smith–Waterman**             | O(nm)           | O(nm)            | same DP structure but local      |
 | **PAM250 alignment**           | O(nm)           | O(nm)            | NW + constant-time PAM lookup    |
-| **Matrix lookup (PAM/BLOSUM)** | O(1)            | O(1)             | Dict/hashtable lookup            |
-| **BLOSUM62 alignment**         | O(nm)           | O(nm)            | NW + constant-time BLOSUM lookup |
+| **Matrix lookup (PAM,BLOSUM)** | O(1)            | O(1)             | Dictionary/hashtable lookup      |
+| **BLOSUM62 alignment**         | O(nm)           | O(nm)            | NW + constant time BLOSUM lookup |
 
 
 ## Set Up
@@ -56,3 +56,11 @@ source venv/bin/activate   # (Mac / Linux)
 pip install -r requirements.txt
 ```
 4. Run each cell in alignment-analysis.ipynb
+
+## References
+
+- Needleman–Wunsch Algorithm https://www.cs.utoronto.ca/~brudno/bcb410/lec2notes.pdf
+- Smith–Waterman Algorithm https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm
+- BLOSUM62 Matrix https://www.ncbi.nlm.nih.gov/IEB/ToolBox/C_DOC/lxr/source/data/BLOSUM62
+- PAM250 Matrix https://www.ncbi.nlm.nih.gov/IEB/ToolBox/C_DOC/lxr/source/data/PAM250
+- NCBI Protein Database https://www.ncbi.nlm.nih.gov/protein/
