@@ -1,4 +1,4 @@
-# Protein Alignment-Analysis
+# Protein Alignment Analysis
 
 This project implements and compares four major methods used in protein sequence alignment: 
 
